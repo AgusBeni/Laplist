@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.header{
+.header {
   cursor: default;
 }
 
@@ -99,7 +99,6 @@ td {
 
 main.table {
   margin: 1rem;
-  background: hsl(0, 0%, 0%);
   overflow: hidden;
 }
 
@@ -116,4 +115,13 @@ tbody tr:nth-child(even) {
 
 tbody tr:hover {
   background: hsl(0, 0%, 30%);
+}
+
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  color: black;
 }
