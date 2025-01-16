@@ -1,5 +1,4 @@
 * {
-  background: hsl(0, 0%, 15%);
   color: hsl(0, 0%, 100%);
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -7,6 +6,7 @@
 
 body {
   margin: 0;
+  background: hsl(0, 0%, 15%);
 }
 
 .header {
@@ -17,9 +17,59 @@ body {
   display: flex;
   gap: 0.5rem;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   background: hsl(0, 0%, 10%);
   /* position: fixed; */
   justify-content: space-between;
   align-items: center;
+}
+
+.nav-button {
+  padding: 10px;
+  background: hsl(0, 0%, 10%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.nav-button:hover {
+  background: hsl(0, 0%, 15%);
+}
+
+.action-button {
+  padding: 10px;
+  background: hsl(0, 0%, 10%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.action-button:hover {
+  background: hsl(0, 0%, 30%);
+}
+
+.table-blok {
+  display: flex;
+  justify-content: center;
+  /* margin-top: 2rem; */
+  /* overflow-x: auto; */
+  margin: 0 0 0 0;
+}
+
+.table-content {
+  border-collapse: collapse;
+}
+
+.table-content thead tr {
+  background: hsl(245, 100%, 20%, 0.5);
+  text-align: left;
+  font-weight: bold;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-content th,
+.table-content td {
+  padding: 0.5rem;
 }
