@@ -64,6 +64,71 @@ function App() {
                   <button className="action-button">Delete</button>
                 </td>
               </tr>
+              <tr>
+                <td>Dell</td>
+                <td>i9</td>
+                <td>SSD</td>
+                <td>3TB</td>
+                <td>Nvidia GTX 1060</td>
+                <td>8GB</td>
+                <td>32GB</td>
+                <td>
+                  <button className="action-button">Edit</button>
+                  <button className="action-button">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dell</td>
+                <td>i9</td>
+                <td>SSD</td>
+                <td>3TB</td>
+                <td>Nvidia GTX 1060</td>
+                <td>8GB</td>
+                <td>32GB</td>
+                <td>
+                  <button className="action-button">Edit</button>
+                  <button className="action-button">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dell</td>
+                <td>i9</td>
+                <td>SSD</td>
+                <td>3TB</td>
+                <td>Nvidia GTX 1060</td>
+                <td>8GB</td>
+                <td>32GB</td>
+                <td>
+                  <button className="action-button">Edit</button>
+                  <button className="action-button">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dell</td>
+                <td>i9</td>
+                <td>SSD</td>
+                <td>3TB</td>
+                <td>Nvidia GTX 1060</td>
+                <td>8GB</td>
+                <td>32GB</td>
+                <td>
+                  <button className="action-button">Edit</button>
+                  <button className="action-button">Delete</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Dell</td>
+                <td>i9</td>
+                <td>SSD</td>
+                <td>3TB</td>
+                <td>Nvidia GTX 1060</td>
+                <td>8GB</td>
+                <td>32GB</td>
+                <td>
+                  <button className="action-button">Edit</button>
+                  <button className="action-button">Delete</button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

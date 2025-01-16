@@ -50,22 +50,52 @@ nav {
   overflow-x: auto;
   padding: 1rem;
   max-width: 90%;
+  max-height: 50%;
+}
+
+.table-section::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table-section::-webkit-scrollbar-thumb{
+  background: hsl(0, 0%, 100%);
+  border-radius: .5rem;
+  visibility: hidden;
+}
+
+.table-section:hover::-webkit-scrollbar-thumb{
+  visibility: visible;
 }
 
 table {
-  margin: 0 auto;
-  border-collapse: collapse;
-  min-width: 1000px;
+  width: 100%;
 }
 
 table,
 th,
 td {
   padding: 1rem;
+  border-collapse: collapse;
 }
 
 main.table {
   margin: 1rem;
   background: hsl(0, 0%, 0%);
   overflow: hidden;
+}
+
+thead th{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: hsl(0, 0%, 15%);
+}
+
+tbody tr:nth-child(even){
+  background: hsl(0, 0%, 5%);
+}
+
+tbody tr:hover{
+  background: hsl(0, 0%, 30%);
 }
