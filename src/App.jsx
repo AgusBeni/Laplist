@@ -34,8 +34,8 @@ function App() {
                 <td>4GB</td>
                 <td>16GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                  <button className="action-button edit">Edit</button>
+                  <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -47,8 +47,8 @@ function App() {
                 <td>2GB</td>
                 <td>8GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                  <button className="action-button edit">Edit</button>
+                  <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -60,8 +60,8 @@ function App() {
                 <td>8GB</td>
                 <td>32GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -73,8 +73,8 @@ function App() {
                 <td>8GB</td>
                 <td>32GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -86,8 +86,8 @@ function App() {
                 <td>8GB</td>
                 <td>32GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -99,8 +99,8 @@ function App() {
                 <td>8GB</td>
                 <td>32GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -112,8 +112,8 @@ function App() {
                 <td>8GB</td>
                 <td>32GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
                 </td>
               </tr>
               <tr>
@@ -125,8 +125,8 @@ function App() {
                 <td>8GB</td>
                 <td>32GB</td>
                 <td>
-                  <button className="action-button">Edit</button>
-                  <button className="action-button">Delete</button>
+                <button className="action-button edit">Edit</button>
+                <button className="action-button delete">Delete</button>
                 </td>
               </tr>
             </tbody>
