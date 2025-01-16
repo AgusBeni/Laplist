@@ -9,12 +9,13 @@ function App() {
           <button className="nav-button">Add item</button>
         </div>
       </div>
-      <div className="table-blok">
-        <table className="table-content">
+      <div>
+        <table>
           <thead>
             <tr>
               <th>Name</th>
               <th>Processor</th>
+              <th>Memory type</th>
               <th>Memory size</th>
               <th>GPU</th>
               <th>VRAM</th>
@@ -26,6 +27,7 @@ function App() {
             <tr>
               <td>Lenovo</td>
               <td>i7</td>
+              <td>SSD</td>
               <td>1TB</td>
               <td>Nvidia RTX 2060</td>
               <td>4GB</td>
@@ -38,6 +40,7 @@ function App() {
             <tr>
               <td>Asus</td>
               <td>i5</td>
+              <td>SSD</td>
               <td>2TB</td>
               <td>Nvidia RTX 2050</td>
               <td>2GB</td>
@@ -50,6 +53,7 @@ function App() {
             <tr>
               <td>Dell</td>
               <td>i9</td>
+              <td>SSD</td>
               <td>3TB</td>
               <td>Nvidia GTX 1060</td>
               <td>8GB</td>
