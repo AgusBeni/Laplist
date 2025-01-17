@@ -10,13 +10,14 @@
 
 body {
   margin: 0;
-  background: hsl(0, 0%, 15%);
+  /* background: hsl(0, 0%, 15%); */
+  background: url("./assets/bg-topography.png");
 }
 
 nav {
   display: flex;
   padding: 0 2rem;
-  background: hsl(0, 0%, 0%);
+  background: hsl(0, 0%, 0%, .85);
   justify-content: space-between;
   align-items: center;
 }
@@ -63,7 +64,7 @@ nav {
 .table-section {
   display: block;
   margin: 1rem auto;
-  background: hsl(0, 0%, 10%);
+  background: hsl(0, 0%, 10%, .90);
   overflow-x: auto;
   padding: 1rem;
   max-width: 90%;
