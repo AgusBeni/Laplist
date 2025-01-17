@@ -5,7 +5,7 @@ import { useState } from "react";
 function App() {
   const [toggleForm, setToggleForm] = useState(false);
 
-  const [laptopForm, setLaptopForm] = useState({});
+  // const [laptopForm, setLaptopForm] = useState({});
 
   function changeToggle() {
     if (toggleForm == true) return setToggleForm(false);
