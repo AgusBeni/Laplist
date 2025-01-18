@@ -18,13 +18,21 @@ function App() {
     });
   }
 
+  function deleteLaptop(id) {
+    setLaptopList((currentLaptopList) => {
+      return currentLaptopList.filter(
+        (currentLaptop) => currentLaptop.id !== id
+      );
+    });
+  }
+
   return (
     <>
       <nav>
         <h1 className="header">Laplist</h1>
         <div>
           <button className="nav-button" onClick={() => changeToggle()}>
-           {toggleForm ? ("Add item"): ("Return")} 
+            {toggleForm ? "Add item" : "Return"}
           </button>
         </div>
       </nav>
@@ -57,7 +65,12 @@ function App() {
                       <td>{laptop.ram}</td>
                       <td>
                         <button className="action-button edit">Edit</button>
-                        <button className="action-button delete">Delete</button>
+                        <button
+                          className="action-button delete"
+                          onClick={() => deleteLaptop(laptop.id)}
+                        >
+                          Delete
+                        </button>
                       </td>
                     </tr>
                   );
