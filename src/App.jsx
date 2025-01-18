@@ -24,7 +24,7 @@ function App() {
         <h1 className="header">Laplist</h1>
         <div>
           <button className="nav-button" onClick={() => changeToggle()}>
-            Add item
+           {toggleForm ? ("Add item"): ("Return")} 
           </button>
         </div>
       </nav>
