@@ -3,7 +3,7 @@ import { Form } from "./Form";
 import { useState } from "react";
 
 function App() {
-  const [toggleForm, setToggleForm] = useState(false);
+  const [toggleForm, setToggleForm] = useState(true);
 
   const [laptopList, setLaptopList] = useState([]);
 
@@ -19,12 +19,20 @@ function App() {
   }
 
   function deleteLaptop(id) {
-    setLaptopList((currentLaptopList) => {
-      return currentLaptopList.filter(
-        (currentLaptop) => currentLaptop.id !== id
-      );
-    });
+    const hasConfirmed = confirm("Delete this laptop from list?");
+
+    if (hasConfirmed) {
+      setLaptopList((currentLaptopList) => {
+        return currentLaptopList.filter(
+          (currentLaptop) => currentLaptop.id !== id
+        );
+      });
+    }
   }
+
+  // function editLaptop(id){
+  //   setLaptopList(currentLaptopList.map(currentLaptop => [...currentLaptopList, ]))
+  // }
 
   return (
     <>
