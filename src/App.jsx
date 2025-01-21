@@ -1,11 +1,19 @@
 import "./styles.css";
 import { Form } from "./Form";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [toggleForm, setToggleForm] = useState(true);
-  const [laptopList, setLaptopList] = useState([]);
   const [selectedLaptop, setSelectedLaptop] = useState(null);
+  const [laptopList, setLaptopList] = useState(() => {
+    const localValue = localStorage.getItem("ITEMS");
+    if (localValue == null) return [];
+    return JSON.parse(localValue);
+  });
+
+  useEffect(() => {
+    localStorage.setItem("ITEMS", JSON.stringify(laptopList));
+  }, [laptopList]);
 
   function changeToggle() {
     if (toggleForm == false) {
