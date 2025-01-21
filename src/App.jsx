@@ -4,12 +4,15 @@ import { useState } from "react";
 
 function App() {
   const [toggleForm, setToggleForm] = useState(true);
-
   const [laptopList, setLaptopList] = useState([]);
+  const [selectedLaptop, setSelectedLaptop] = useState(null);
 
   function changeToggle() {
-    if (toggleForm == true) return setToggleForm(false);
-    return setToggleForm(true);
+    if (toggleForm == false) {
+      setSelectedLaptop(null);
+      return setToggleForm(true);
+    }
+    return setToggleForm(false);
   }
 
   function addNewForm(newForm) {
@@ -30,9 +33,14 @@ function App() {
     }
   }
 
-  // function editLaptop(id){
-  //   setLaptopList(currentLaptopList.map(currentLaptop => [...currentLaptopList, ]))
-  // }
+  function editLaptop(id) {
+    changeToggle();
+    const laptopNow = laptopList.filter(
+      (currentLaptop) => currentLaptop.id == id
+    );
+
+    return setSelectedLaptop(laptopNow);
+  }
 
   return (
     <>
@@ -72,7 +80,12 @@ function App() {
                       <td>{laptop.vram}</td>
                       <td>{laptop.ram}</td>
                       <td>
-                        <button className="action-button edit">Edit</button>
+                        <button
+                          className="action-button edit"
+                          onClick={() => editLaptop(laptop.id)}
+                        >
+                          Edit
+                        </button>
                         <button
                           className="action-button delete"
                           onClick={() => deleteLaptop(laptop.id)}
@@ -86,7 +99,11 @@ function App() {
               </tbody>
             </table>
           ) : (
-            <Form changeToggle={changeToggle} onSubmit={addNewForm} />
+            <Form
+              changeToggle={changeToggle}
+              onSubmit={addNewForm}
+              selectedLaptop={selectedLaptop}
+            />
           )}
         </div>
       </main>

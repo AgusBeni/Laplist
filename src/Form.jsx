@@ -1,17 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // eslint-disable-next-line react/prop-types
-export function Form({ changeToggle, onSubmit }) {
-  const [newForm, setNewForm] = useState({});
+export function Form({ changeToggle, onSubmit, selectedLaptop }) {
+  const [form, setForm] = useState({});
 
   function handleInput(e) {
-    setNewForm({ ...newForm, [e.target.id]: e.target.value });
+    setForm({ ...form, [e.target.id]: e.target.value });
   }
+
+  useEffect(() => {
+    //TODO: populate the input
+    if (selectedLaptop) {
+      setForm((prevForm) => ({ ...prevForm, ...selectedLaptop }));
+    }
+  }, [selectedLaptop]);
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    onSubmit(newForm);
+    onSubmit(form);
 
     changeToggle();
   }
