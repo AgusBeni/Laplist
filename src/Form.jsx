@@ -9,7 +9,6 @@ export function Form({ changeToggle, onSubmit, selectedLaptop }) {
   }
 
   useEffect(() => {
-    //TODO: populate the input
     if (selectedLaptop) {
       setForm((prevForm) => ({ ...prevForm, ...selectedLaptop }));
     }
@@ -31,19 +30,24 @@ export function Form({ changeToggle, onSubmit, selectedLaptop }) {
       <div>
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" onChange={handleInput} />
+          <input
+            type="text"
+            id="name"
+            onChange={handleInput}
+            value={form.name || ""}
+          />
           <label htmlFor="processor">Processor</label>
-          <input type="text" id="processor" onChange={handleInput} />
+          <input type="text" id="processor" onChange={handleInput} value={form.name || ""} />
           <label htmlFor="memoryType">Memory type</label>
-          <input type="text" id="memoryType" onChange={handleInput} />
+          <input type="text" id="memoryType" onChange={handleInput} value={form.memoryType || ""}/>
           <label htmlFor="memorySize">Memory size</label>
-          <input type="text" id="memorySize" onChange={handleInput} />
+          <input type="text" id="memorySize" onChange={handleInput} value={form.memorySize || ""} />
           <label htmlFor="gpu">GPU</label>
-          <input type="text" id="gpu" onChange={handleInput} />
+          <input type="text" id="gpu" onChange={handleInput} value={form.gpu || ""}/>
           <label htmlFor="vram">VRAM</label>
-          <input type="text" id="vram" onChange={handleInput} />
+          <input type="text" id="vram" onChange={handleInput} value={form.vram || ""}/>
           <label htmlFor="ram">RAM</label>
-          <input type="text" id="ram" onChange={handleInput} />
+          <input type="text" id="ram" onChange={handleInput} value={form.ram || ""}/>
 
           <button className="action-button edit">Submit</button>
         </form>
