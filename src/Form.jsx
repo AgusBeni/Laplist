@@ -14,6 +14,7 @@ export function Form({ changeToggle, onSubmit, selectedLaptop }) {
     }
   }, [selectedLaptop]);
 
+  //add save changes
   function handleSubmit(e) {
     e.preventDefault();
 

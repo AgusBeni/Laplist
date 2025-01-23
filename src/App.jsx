@@ -43,9 +43,6 @@ function App() {
 
   function editLaptop(id) {
     changeToggle();
-    // const laptopNow = laptopList.filter(
-    //   (currentLaptop) => currentLaptop.id == id
-    // );
 
     const laptopNow = laptopList.find(
       (currentLaptop) => currentLaptop.id === id
