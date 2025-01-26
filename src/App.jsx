@@ -25,13 +25,16 @@ function App() {
 
   function addNewForm(newForm) {
     setLaptopList((currentLaptopList) => {
-      // if (
-      //   currentLaptopList.find((laptop) => {
-      //     // console.log(laptop.id);
-      //     // console.log(laptop.id === newForm.id);
-      //     laptop.id === newForm.id;
-      //   })
-      // )
+      const existingLaptop = currentLaptopList.find(
+        (laptop) => laptop.id === newForm.id
+      );
+
+      if (existingLaptop) {
+        return currentLaptopList.map((laptop) =>
+          laptop.id === newForm.id ? { ...laptop, ...newForm } : laptop
+        );
+      }
+
       return [...currentLaptopList, { id: crypto.randomUUID(), ...newForm }];
     });
   }
