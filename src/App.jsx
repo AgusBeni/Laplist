@@ -7,7 +7,7 @@ function App() {
   const [selectedLaptop, setSelectedLaptop] = useState(null);
   const [laptopList, setLaptopList] = useState(() => {
     const localValue = localStorage.getItem("ITEMS");
-    if (localValue == null) return [];
+    if (localValue == null || localValue == "undefined") return [];
     return JSON.parse(localValue);
   });
 
@@ -25,6 +25,13 @@ function App() {
 
   function addNewForm(newForm) {
     setLaptopList((currentLaptopList) => {
+      // if (
+      //   currentLaptopList.find((laptop) => {
+      //     // console.log(laptop.id);
+      //     // console.log(laptop.id === newForm.id);
+      //     laptop.id === newForm.id;
+      //   })
+      // )
       return [...currentLaptopList, { id: crypto.randomUUID(), ...newForm }];
     });
   }
@@ -47,7 +54,7 @@ function App() {
     const laptopNow = laptopList.find(
       (currentLaptop) => currentLaptop.id === id
     );
-    console.log(laptopNow);
+
     return setSelectedLaptop(laptopNow);
   }
 
